@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#08131d" />
+    <title>Neon Snake</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="topbar">
+        <a class="brand" href="./" aria-label="Neon Snake home"><span class="brand-mark">✦</span><span>NEON SNAKE</span></a>
+        <div class="status"><span class="live-dot"></span><span id="statusText">READY TO PLAY</span></div>
+      </header>
+
+      <section class="hero">
+        <p class="eyebrow">CLASSIC ARCADE / 001</p>
+        <h1>Stay <em>hungry.</em><br />Stay alive.</h1>
+        <p class="intro">A tiny, tactile snake game built for quick sessions<br class="desktop-only" /> and high scores. How long can you keep growing?</p>
+      </section>
+
+      <section class="game-layout" aria-label="Snake game">
+        <div class="game-card">
+          <div class="card-head"><span>FIELD / <strong>01</strong></span><span id="levelLabel">LEVEL 01</span></div>
+          <div class="board-wrap">
+            <canvas id="game" width="480" height="480" aria-label="Snake game board"></canvas>
+            <div class="overlay" id="overlay"><span class="overlay-kicker">READY?</span><strong>Find your rhythm.</strong><button id="startBtn">START GAME <span>↗</span></button><small>Use arrow keys or WASD to move</small></div>
+          </div>
+          <div class="card-foot"><span><i class="key-dot"></i> <span id="hint">PRESS START TO BEGIN</span></span><span id="speedLabel">SPEED 01</span></div>
+        </div>
+
+        <aside class="stats">
+          <div class="stat-block"><span class="label">CURRENT SCORE</span><strong id="score">0000</strong><span class="accent-line"></span></div>
+          <div class="stat-block"><span class="label">BEST SCORE</span><strong id="best">0000</strong><span class="muted-note">PERSONAL RECORD</span></div>
+          <div class="stat-block"><span class="label">FOOD COLLECTED</span><strong id="eaten">00</strong><span class="muted-note">KEEP GOING</span></div>
+          <div class="controls"><span class="label">CONTROLS</span><div class="keys"><span>↑</span><span>←</span><span>↓</span><span>→</span><small>OR WASD</small></div></div>
+          <button class="reset" id="resetBtn">RESET SCORE <span>↻</span></button>
+        </aside>
+      </section>
+
+      <footer><span>DESIGNED FOR THE QUICK THINKERS</span><span>© 2026 / NEON SNAKE</span></footer>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
